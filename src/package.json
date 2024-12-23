@@ -1,0 +1,46 @@
+{
+  "name": "openspg-kag-schema-highlighter",
+  "scripts": {
+    "test": "vscode-test"
+  },
+  "displayName": "OpenSPG KAG Schema Highlighter",
+  "description": "Syntax highlighting for OpenSPG KAG Schema",
+  "version": "0.0.1",
+  "publisher": "lazydreamerbliss",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lazydreamerbliss/OpenSPG_KAG_schema_highlighter"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "schema",
+        "aliases": [
+          "OpenSPG KAG Schema",
+          "schema"
+        ],
+        "extensions": [
+          ".schema"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "schema",
+        "scopeName": "source.schema",
+        "path": "./syntaxes/schema.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
