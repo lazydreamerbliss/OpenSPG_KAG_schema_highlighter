@@ -1,0 +1,5 @@
+# git ignore for JS project
+node_modules/
+dist/
+coverage/
+.env
