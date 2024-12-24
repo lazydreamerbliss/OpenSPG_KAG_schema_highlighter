@@ -179,9 +179,13 @@
 	],
 	"repository": {
 		"comments": {
-			"name": "comment.line.schema",
-			"begin": "//",
-			"end": "$"
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.schema",
+					"begin": "#",
+					"end": "$"
+				}
+			]
 		}
 	},
 	"scopeName": "source.schema"

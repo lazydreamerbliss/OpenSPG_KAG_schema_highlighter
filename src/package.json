@@ -5,7 +5,7 @@
   },
   "displayName": "OpenSPG KAG Schema Highlighter",
   "description": "Syntax highlighting for OpenSPG KAG Schema",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "lazydreamerbliss",
   "engines": {
     "vscode": "^1.96.0"
