@@ -87,25 +87,46 @@
 			}
 		},
 		{
-			"name": "meta.property-definition.schema",
-			"match": "^\\s*([a-zA-Z_#][a-zA-Z0-9_#]*)(\\s*\\()([^)]+)(\\))\\s*((:))\\s*([A-Z][a-zA-Z0-9_]*)",
+			"name": "meta.special-hash.schema",
+			"match": "\\b([A-Z]+)(#)([a-zA-Z]+)\\b",
 			"captures": {
 				"1": {
-					"name": "variable.parameter.schema"
+					"name": "keyword.control.prefix.schema"
 				},
 				"2": {
-					"name": "comment.parenthetical.brackets.schema"
+					"name": "keyword.operator.hash.schema"
 				},
 				"3": {
-					"name": "comment.parenthetical.schema"
+					"name": "variable.parameter.schema"
+				}
+			}
+		},
+		{
+			"name": "meta.property-definition.schema",
+			"match": "^\\s*(?:([A-Z]+)(#))?([a-zA-Z_][a-zA-Z0-9_]*)(\\s*\\()([^)]+)(\\))\\s*((:))\\s*([A-Z][a-zA-Z0-9_]*)",
+			"captures": {
+				"1": {
+					"name": "keyword.control.prefix.schema"
+				},
+				"2": {
+					"name": "keyword.operator.hash.schema"
+				},
+				"3": {
+					"name": "variable.parameter.schema"
 				},
 				"4": {
 					"name": "comment.parenthetical.brackets.schema"
 				},
+				"5": {
+					"name": "comment.parenthetical.schema"
+				},
 				"6": {
+					"name": "comment.parenthetical.brackets.schema"
+				},
+				"8": {
 					"name": "keyword.operator.schema"
 				},
-				"7": {
+				"9": {
 					"name": "entity.name.class.schema"
 				}
 			}
@@ -182,7 +203,7 @@
 			"patterns": [
 				{
 					"name": "comment.line.number-sign.schema",
-					"begin": "#",
+					"begin": "(?<!^\\s*[A-Z]+)#",
 					"end": "$"
 				}
 			]
